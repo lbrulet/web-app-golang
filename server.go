@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	route "github.com/web-app-golang/routes"
+	route "github.com/lbrulet/web-app-golang/routes"
 )
 
 func main() {
