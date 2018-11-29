@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 	"net/http"
-	route "web-app/routes"
 
 	"github.com/gorilla/mux"
+	route "github.com/web-app-golang/routes"
 )
 
 func main() {
