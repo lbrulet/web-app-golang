@@ -1,22 +1,11 @@
 package main
 
 import (
-	"log"
-	"net/http"
-
-	"github.com/gorilla/mux"
-	route "github.com/lbrulet/web-app-golang/routes"
+	_ "github.com/lbrulet/web-app-golang/config"
+	_ "github.com/lbrulet/web-app-golang/mongo"
+	_ "github.com/lbrulet/web-app-golang/routes"
 )
 
 func main() {
-	r := mux.NewRouter()
-	// Routes consist of a path and a handler function.
-	r.HandleFunc("/", route.YourHandler)
-	r.HandleFunc("/users", route.AllUsers).Methods("GET")
-	r.HandleFunc("/users", route.CreateUser).Methods("POST")
-	r.HandleFunc("/users", route.UpdateUser).Methods("PUT")
-	r.HandleFunc("/users", route.DeleteUser).Methods("DELETE")
-	r.HandleFunc("/users/{id}", route.FindUser).Methods("GET")
-	// Bind to a port and pass our router in
-	log.Fatal(http.ListenAndServe(":8000", r))
+
 }
